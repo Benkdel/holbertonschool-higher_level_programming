@@ -1,9 +1,12 @@
 #!/usr/bin/python3
 
 def uppercase(str):
+        """ ASCII code convert ord(c) """
         for c in str:
                 if (ord(c) >= 97 and ord(c) <= 122):
-                        print(chr(ord(c) - 32), end="")
+                        conv = 32
                 else:
-                        print(c, end="")
+                        conv = 0
+                print(chr(ord(c) - conv), end="")
         print()
+                
