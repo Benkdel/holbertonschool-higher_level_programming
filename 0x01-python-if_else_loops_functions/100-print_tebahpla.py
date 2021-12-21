@@ -1,12 +1,3 @@
 #!/usr/bin/python3
-
-lower = 122
-upper = 89
-
-for i in range(0, 26):
-    if (i % 2 == 0):
-        print(chr(lower), end="")
-        lower -= 2
-    else:
-        print(chr(upper), end="")
-        upper -= 2
+for alpha in reversed(range(65, 91)):
+    print("{:c}".format((alpha + 32) if (alpha % 2 == 0) else alpha), end="")
