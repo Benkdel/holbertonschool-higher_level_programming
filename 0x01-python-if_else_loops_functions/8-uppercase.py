@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 def uppercase(str):
     for c in str:
         """ ASCII code convert ord(c) """
