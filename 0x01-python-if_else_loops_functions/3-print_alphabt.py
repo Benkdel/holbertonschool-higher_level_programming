@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-import string
 
-for i in string.ascii_lowercase:
-        if i != 'q' and i != 'e': 
-                print(i, end="")
+for i in range(0, 26):
+        if i != 4 and i != 16: 
+                print(chr(97 + i), end="")
