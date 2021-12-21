@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 def uppercase(str):
-    for c in str:
+    new_str = ""
+    for i in range(0, len(str)):
         """ ASCII code convert ord(c) """
-        if (ord(c) >= 97 and ord(c) <= 122):
-            conv = 32
+        if ord(str[i]) >= 97 and ord(str[i]) <= 122:
+            new_str += chr(ord(str[i]) - 32)
         else:
-            conv = 0
-        print("{:c}".format(chr(ord(c) - conv)), end="")
-    print()
+            new_str += str[i]
+    print("{0:s}".format(new_str))
