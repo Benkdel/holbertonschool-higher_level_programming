@@ -2,4 +2,4 @@
 if __name__ == 'main':
     def print_list_integer(my_list=[]):
         for i in my_list:
-            print("{:2d}".format(i))
+            print("{:d}".format(i))
