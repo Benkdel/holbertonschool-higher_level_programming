@@ -1,4 +1,5 @@
-#!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
-    new_matrix = [[(matrix[x][y]**2) for y in range(3)] for x in range(3)]
-    return new_matrix
+    dup_matrix = matrix.copy()
+    for line in range(len(matrix)):
+        dup_matrix[line] = list(map((lambda x: x**2), matrix[line]))
+    return(dup_matrix)
