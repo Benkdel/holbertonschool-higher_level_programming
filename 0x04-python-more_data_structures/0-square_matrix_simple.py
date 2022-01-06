@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
     dup_matrix = matrix.copy()
     for line in range(len(matrix)):
