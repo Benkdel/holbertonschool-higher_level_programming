@@ -1,30 +1,53 @@
 #!/usr/bin/python3
+""" Define an object name Square.
+"""
+
 
 class Square:
+    """ Object Square [class]
+    """
 
     def __init__(self, size=0):
-        self.__size = size
+        """ Method - Initialize.
+        Args:
+            self (class): This class
+            size (int): Size of the square
+        """
+        self.size = size
+
+    def area(self):
+        """ Method - Returns the current square area.
+        Args:
+            self (class): This class
+        """
+        return (self.__size ** 2)
+
+    def my_print(self):
+        """ Method - prints in stdout the square with the character #.
+        Args:
+            self (class): This class
+        """
+        if self.__size:
+            for i in range(self.__size):
+                for j in range(self.__size):
+                    print("#", end='')
+                print()
+        else:
+            print()
 
     @property
     def size(self):
-        return self.__size
-    
+        """ Get - instance attribute size
+        """
+        return (self.__size)
+
     @size.setter
     def size(self, value):
-        if type(value) is not int:
+        """ Set - instance attribute size
+        """
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        if value < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
-        self.__size = value
-
-    def area(self):
-        return self.__size * self.__size
-
-    def my_print(self):
-        if (self.__size == 0):
-            print("\n")
         else:
-            for rows in range(0, self.__size):
-                for cols in range(0, self.__size):
-                    print("#", end="")
-                print(end="\n")
+            self.__size = value
