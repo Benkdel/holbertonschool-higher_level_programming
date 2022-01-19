@@ -3,7 +3,7 @@
 """Class documentation"""
 
 
-class Square():
+class Square:
     """Class documentation"""
 
     def __init__(self, size=0):

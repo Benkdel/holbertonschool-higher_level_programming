@@ -3,7 +3,7 @@
 """Class documentation"""
 
 
-class Square():
+class Square:
     """Class documentation"""
 
 
