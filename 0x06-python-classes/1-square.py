@@ -4,6 +4,7 @@
 
 
 class Square():
+    
     """Class documentation"""
     
     def __init__(self, size):
