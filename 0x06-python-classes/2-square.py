@@ -1,16 +1,20 @@
 #!/usr/bin/python3
-
-"""Class documentation"""
+"""Define an object name Square.
+"""
 
 
 class Square:
-    """Class documentation"""
-
-
+    """ Object Square [class]
+    """
     def __init__(self, size=0):
-        """__init__ constructor method."""
-        if type(size) is not int:
+        """ Initialize method.
+        Args:
+            self (class): This class
+            size (int): Size of the square
+        """
+        if not isinstance(size, int):
             raise TypeError("size must be an integer")
-        if size < 0:
+        elif size < 0:
             raise ValueError("size must be >= 0")
-        self.__size = size
+        else:
+            self.__size = int(size)

@@ -1,12 +1,17 @@
 #!/usr/bin/python3
-
-"""Class documentation"""
+"""Define an object name Square."""
 
 
 class Square:
+    """ Object Square [class]. """
 
-    """Class documentation"""
-    
     def __init__(self, size):
-        """__init__ constructor method."""
+        """ Initialize method.
+        Args:
+            self (class): This class
+            size (int): Size of the square
+        """
+
+        """ Instance attribute
+        """
         self.__size = size
