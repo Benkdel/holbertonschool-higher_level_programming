@@ -1,0 +1,11 @@
+{
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.formatOnPaste": true,
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Default Dark+",
+    "editor.codeLens": false,
+    "editor.formatOnType": true,
+    "editor.formatOnSave": true
+}
