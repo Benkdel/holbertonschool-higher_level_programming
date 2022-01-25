@@ -37,7 +37,7 @@ class Rectangle:
     @width.setter
     def width(self, value):
         """
-            sets width 
+            sets width
         """
         if type(value) is not int:
             raise TypeError("width must be an integer")
@@ -101,5 +101,3 @@ class Rectangle:
             return rect_1
         else:
             return rect_2
-
-    

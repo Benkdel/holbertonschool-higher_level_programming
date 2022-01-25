@@ -10,8 +10,10 @@ class Rectangle:
     """
 
     def __init__(self, width=0, height=0):
-        """
-            Instantiation with optional arguments
+        """ Method - Initialize.
+        Args:
+            width (int): Width of the Rectangle
+            height (int): Height of the Rectangle
         """
         self.__width = width
         self.__height = height
@@ -33,7 +35,7 @@ class Rectangle:
     @width.setter
     def width(self, value):
         """
-            sets width 
+            sets width
         """
         if type(value) is not int:
             raise TypeError("width must be an integer")
