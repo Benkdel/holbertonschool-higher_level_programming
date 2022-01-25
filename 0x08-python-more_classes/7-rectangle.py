@@ -80,7 +80,7 @@ class Rectangle:
             return p_rectangle
         else:
             for i in range(self.__height):
-                p_rectangle += str(Rectangle.print_symbol) * self.__width
+                p_rectangle += str(self.print_symbol) * self.__width
                 if count != self.__height:
                     p_rectangle += "\n"
                 count += 1
