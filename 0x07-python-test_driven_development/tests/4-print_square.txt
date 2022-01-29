@@ -1,50 +1,31 @@
-Module print square using #
-======================
+=========================
+The 4-print_square module
+=========================
 
-Usage print_square:
-Takes an integer greater than or equal to 0 and prints a square that size 
+Using print_square
+==================
 
-     >>> print_square = __import__('4-print_square').print_square
+	# Import of the module to test
+	>>> print_square = __import__('4-print_square').print_square
 
-Tests:
+Now use this:
+	>>> size = None
+	>>> print_square(size)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
 
-    >>> print_square(4)
-    ####
-    ####
-    ####
-    ####
-    >>> print_square(10)
-    ##########
-    ##########
-    ##########
-    ##########
-    ##########
-    ##########
-    ##########
-    ##########
-    ##########
-    ##########
-    >>> print_square(0)
+Now use this:
+	>>> size = 0
+	>>> print_square(size)
 
-    >>> print_square(1)
-    #
-    >>> print_square(2.5)
-    Traceback (most recent call last):
-        File "<stdin>", line ?, in <module>
-        File ? line ?, in ?
-        raise TypeError("size must be an integer")
-    TypeError: size must be an integer
-    >>> print_square(-2.5)
-    Traceback (most recent call last):
-        File "<stdin>", line ?, in <module>
-        File ? line ?, in ?
-        raise TypeError("size must be an integer")
-    TypeError: size must be an integer
-    >>> print_square(-2)
-    Traceback (most recent call last):
-        File "<stdin>", line ?, in <module>
-        File ? line ?, in ?
-        raise ValueError("size must be >= 0")
-    ValueError: size must be >= 0
+Now use this:
+	>>> size = -1
+	>>> print_square(size)
+	Traceback (most recent call last):
+	ValueError: size must be >= 0
 
-   
+Now use this:
+	>>> size = -13.5
+	>>> print_square(size)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
