@@ -4,7 +4,7 @@
 </h1>
 
 <h2 align="center">
-    0x0A - Python - Inheritance
+    0x0B - Python - Input/Output/JSON rep
 </h2>
 
 <p align="center">
