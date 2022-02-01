@@ -1,0 +1,30 @@
+Module to_json_string
+=======================================
+
+
+Returns JSON rep of an object (string)
+=======================================
+
+     >>> append_write = __import__('3-to_json_string').to_json_string
+
+=======================================
+
+Documentation:
+     
+     Checking docstring for module:
+        >>> __import__('3-to_json_string').__doc__ != None
+        True
+
+     Check docstring for function:
+        >>> __import__("3-to_json_string").to_json_string.__doc__ != None
+        True
+
+=======================================
+
+Tests:
+
+    >>> print(to_json_string([1, 2, 3]))
+    [1, 2, 3]
+    >>> print(to_json_string({'id': 12, 'name': "John", 'places': [ "San Francisco", "Tokyo" ], 'is_active': True, 'info': {'age': 36, 'average': 3.14}))
+    {"id": 12, "is_active": true, "name": "John", "info": {"average": 3.14, "age": 36}, "places": ["San Francisco", "Tokyo"]}
+

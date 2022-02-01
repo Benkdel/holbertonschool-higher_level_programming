@@ -1,0 +1,29 @@
+Module write_file
+=======================================
+
+
+Write text into file
+=======================================
+
+     >>> write_file = __import__('1-write_file').write_file
+
+=======================================
+
+Documentation:
+     
+     Checking docstring for module:
+        >>> __import__('1-write_file').__doc__ != None
+        True
+
+     Check docstring for function:
+        >>> __import__("1-write_file").write_file.__doc__ != None
+        True
+
+=======================================
+
+Tests:
+
+    >>> write_file("tests/write_test_files/my_first_file_0.txt", "This School is so cool!\n")
+    29
+    >>> write_file("tests/write_test_files/my_first_file_1.txt", "")
+    0

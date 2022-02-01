@@ -1,0 +1,25 @@
+Module load_from_json_file
+=======================================
+
+
+Loads object from JSON file
+=======================================
+
+     >>> load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
+
+=======================================
+
+Documentation:
+     
+     Checking docstring for module:
+        >>> __import__('6-load_from_json_file').__doc__ != None
+        True
+
+     Check docstring for function:
+        >>> __import__("6-load_from_json_file").load_from_json_file.__doc__ != None
+        True
+
+=======================================
+
+Tests:
+

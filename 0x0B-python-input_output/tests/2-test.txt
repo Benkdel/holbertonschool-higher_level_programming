@@ -1,0 +1,29 @@
+Module append_write
+=======================================
+
+
+Append string into file
+=======================================
+
+     >>> append_write = __import__('2-append_write').append_write
+
+=======================================
+
+Documentation:
+     
+     Checking docstring for module:
+        >>> __import__('2-append_write').__doc__ != None
+        True
+
+     Check docstring for function:
+        >>> __import__("2-append_write").append_write.__doc__ != None
+        True
+
+=======================================
+
+Tests:
+
+    >>> append_write("tests/write_test_files/append_test_file_0.txt", "This School is so cool!\n")
+    29
+    >>> append_write("tests/write_test_files/append_test_file_1.txt", "This School is so cool!\n")
+    29

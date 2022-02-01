@@ -1,0 +1,25 @@
+Module save_to_json_file
+=======================================
+
+
+Saves object into JSON file
+=======================================
+
+     >>> save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+
+=======================================
+
+Documentation:
+     
+     Checking docstring for module:
+        >>> __import__('5-save_to_json_file').__doc__ != None
+        True
+
+     Check docstring for function:
+        >>> __import__("5-save_to_json_file").save_to_json_file.__doc__ != None
+        True
+
+=======================================
+
+Tests:
+

@@ -1,0 +1,32 @@
+Module read_file
+=======================================
+
+
+Reads file and prints input to stdout
+=======================================
+
+     >>> read_file = __import__('0-read_file').read_file
+
+=======================================
+
+Documentation:
+     
+     Checking docstring for module:
+        >>> __import__('0-read_file').__doc__ != None
+        True
+
+     Check docstring for function:
+        >>> __import__("0-read_file").read_file.__doc__ != None
+        True
+
+=======================================
+
+Tests:
+
+    >>> read_file("tests/my_file_0.txt")
+    We offer a truly innovative approach to education:
+    focus on building reliable applications and scalable systems, take on real-world challenges, collaborate with your peers.
+    <BLANKLINE>
+    >>> read_file("tests/my_empty_file_0.txt")
+    <BLANKLINE>
+    <BLANKLINE>
