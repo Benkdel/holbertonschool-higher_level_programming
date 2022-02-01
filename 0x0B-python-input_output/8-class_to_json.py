@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 """
-    Class to JSON
+    Task 8 - Mandatory
 """
 
 
 def class_to_json(obj):
     """
-        Function that retuns the dictionary description of an obj
+        Returns:
+            dictionary description of an object
     """
 
     res = {}
