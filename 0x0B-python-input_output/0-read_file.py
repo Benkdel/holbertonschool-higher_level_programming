@@ -9,5 +9,5 @@ def read_file(filename=""):
         Reads file and prints it to stdout
     """
     with open(filename, mode="r", encoding="utf-8") as recFile:
-        print(recFile.read())
+        print(recFile.read(), end="")
     recFile.close()
