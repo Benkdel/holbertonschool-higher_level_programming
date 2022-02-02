@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-   Task 7 - Mandatory 
+   Task 7 - Mandatory
 """
 
 import sys
