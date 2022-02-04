@@ -124,9 +124,8 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """
-        Assigns an argument to each attribute
-        **kwargs must be skipped if *args exists and is not empty.
-        Each key in this dictionary represents an attribute to the instance
+            Assigns attributes
+            **kwargs skipped if *args is passed
         """
         args_list = ["id", "width", "height", "x", "y"]
         if args and args[0] is not None:
@@ -135,6 +134,14 @@ class Rectangle(Base):
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        """
+            Dictionary representation
+        """
+        key_list = ["id", "width", "height", "x", "y"]
+        value_list = [self.id, self.width, self.height, self.x, self.y]
+        return dict(zip(key_list, value_list))
 
     " ================ Python Builtint Methods ================ "
 
@@ -145,3 +152,5 @@ class Rectangle(Base):
         description = "[Rectangle] ({}) <{}/{}> - <{}/{}>".format(
             self.id, self.__x, self.__y, self.__width, self.__height)
         return (description)
+    
+    

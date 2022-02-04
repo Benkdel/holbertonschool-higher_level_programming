@@ -1,7 +1,9 @@
 #!/urs/bin/python3
 """
-    Module to define Base Class
+    Base Class
 """
+
+import json
 
 
 class Base:
@@ -20,3 +22,16 @@ class Base:
         else:
             Base.__nb__objects += 1
             self.id = Base.__nb__objects
+    
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """
+            Returns:
+                JSON string of list_dic...
+        """
+        if list_dictionaries is None or list_dictionaries[0] == None:
+            return ("[]")
+
+        return (json.dumps(list_dictionaries))
+
+    
