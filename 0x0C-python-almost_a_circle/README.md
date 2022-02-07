@@ -4,7 +4,7 @@
 </h1>
 
 <h2 align="center">
-    0x0B - Python - Input/Output/JSON rep
+    0x0C - Python - Almost a Circle
 </h2>
 
 <p align="center">
