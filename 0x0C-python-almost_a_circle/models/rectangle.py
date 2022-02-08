@@ -15,10 +15,10 @@ class Rectangle(Base):
         """
             Constructor
         """
-        width(width)
-        height(height)
-        x(x)
-        y(y)
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         super().__init__(id)
 
     " ================ Getters ================ "
