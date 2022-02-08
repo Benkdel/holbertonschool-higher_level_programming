@@ -31,9 +31,8 @@ class Base:
             Returns:
                 JSON string of list_dic...
         """
-        if list_dictionaries is None or list_dictionaries[0] is None:
+        if list_dictionaries is None or not list_dictionaries:
             return ("[]")
-
         return (json.dumps(list_dictionaries))
 
     @classmethod
@@ -43,14 +42,16 @@ class Base:
         """
         filename = "{}.json".format(cls.__name__)
         list_dict = []
-        if not list_objs:
+        if list_objs is None or not list_objs:
             pass
         else:
-            for i in range(len(list_objs)):
-                list_dict.append(list_objs[i].to_dictionary())
-        lists = cls.to_json_string(list_dict)
-        with open(filename, 'w', encoding="utf-8") as f:
-            f.write(lists)
+            for instance in list_objs:
+                list_dict.append(instance.to_dictionary())
+
+        json_str = cls.to_json_string(list_dict)
+
+        with open(filename, mode="w") as filejson:
+            filejson.write(json_str)
 
     @staticmethod
     def from_json_string(json_string):
@@ -58,7 +59,7 @@ class Base:
             Returns:
                 list of JSON string
         """
-        if not json_string:
+        if json_string is None or not json_string:
             return []
         return json.loads(json_string)
 
@@ -69,11 +70,11 @@ class Base:
                 an instance with all attributes already set
         """
         if cls.__name__ == "Rectangle":
-            dummy = cls(1, 1)
+            new_object = cls(1, 1)
         elif cls.__name__ == "Square":
-            dummy = cls(1)
-        dummy.update(**dictionary)
-        return dummy
+            new_object = cls(1)
+        new_object.update(**dictionary)
+        return new_object
 
     @classmethod
     def load_from_file(cls):
@@ -91,3 +92,51 @@ class Base:
                 return result
         except:
             return result
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ Method: That writes the CSV string representation
+            of list_objs to a file.
+            Args:
+                cls (class): The class.
+                list_objs (list): Is a list of instances who inherits of Base.
+                                  Example:
+                                  list of Rectangle or list of Square instances
+        """
+        filename = "{}.csv".format(cls.__name__)
+        with open(filename, mode="w") as filecsv:
+            if list_objs is not None and list_objs:
+                if cls.__name__ == "Rectangle":
+                    labels = ["id", "width", "height", "x", "y"]
+                elif cls.__name__ == "Square":
+                    labels = ["id", "size", "x", "y"]
+                writer = csv.DictWriter(filecsv, fieldnames=labels)
+                for obj in list_objs:
+                    writer.writerow(obj.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ Method: Create a list of instances.
+            Returns:
+                List of instances.
+        """
+        filename = "{}.csv".format(cls.__name__)
+        if os.path.isfile(filename) is False:
+            return (list())
+
+        with open(filename, mode="r") as filecsv:
+            if cls.__name__ == "Rectangle":
+                labels = ["id", "width", "height", "x", "y"]
+            elif cls.__name__ == "Square":
+                labels = ["id", "size", "x", "y"]
+            reader = csv.DictReader(filecsv, fieldnames=labels)
+
+            """ Info - Convert str a int the values """
+            list_dict = [dict([key, int(value)] for key, value in dic.items())
+                         for dic in reader]
+            list_inst = list()
+
+            for dic in list_dict:
+                list_inst.append(cls.create(**dic))
+
+        return (list_inst)
