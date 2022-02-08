@@ -65,16 +65,18 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        """ Method: Create a new instance.
+        Args:
+            dictionary (dict): Contain values of the new instance.
+        Returns:
+            Instance with all attributes already set.
         """
-            Returns:
-                an instance with all attributes already set
-        """
-        if cls.__name__ == "Rectangle":
-            new_object = cls(1, 1)
-        elif cls.__name__ == "Square":
+        if cls.__name__ == "Square":
             new_object = cls(1)
+        else:
+            new_object = cls(1, 1)
         new_object.update(**dictionary)
-        return new_object
+        return (new_object)
 
     @classmethod
     def load_from_file(cls):
