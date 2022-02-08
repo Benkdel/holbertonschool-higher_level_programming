@@ -146,9 +146,12 @@ class Rectangle(Base):
     " ================ Python Builtint Methods ================ "
 
     def __str__(self):
+        """ Method (custom): Get format string for the Rectangle.
+        Returns:
+            The representation in str for the Rectangle.
+            -'[Rectangle] (<id>) <x>/<y> - <width>/<height>'-
         """
-            Override str method
-        """
-        description = "[Rectangle] ({}) <{}/{}> - <{}/{}>".format(
-            self.id, self.__x, self.__y, self.__width, self.__height)
-        return (description)
+        str_rect = "({}) ".format(self.id)
+        str_rect += "{}/{} - ".format(self.x, self.y)
+        str_rect += "{}/{}".format(self.width, self.height)
+        return ("[Rectangle] " + str_rect)
