@@ -45,17 +45,22 @@ class Square(Rectangle):
     " ================ Public Methods ================ "
 
     def update(self, *args, **kwargs):
+        """ Method: Update the Square,
+            that assigns an argument to each attribute,
+            in the order (id, size, x, y)
+            Args:
+                args (list): A list of new values to atributes.
+                kwargs (dict): A dictionary of new values to atributes.
         """
-            Assigns attributes
-            **kwargs skipped if *args is passed
-        """
-        arg_list = ["id", "size", "x", "y"]
-        if args and args[0] is not None:
+        if args is not None and len(args) > 0:
             for i in range(len(args)):
-                setattr(self, arg_list[i], args[i])
-            else:
-                for key, value in kwargs.items():
-                    setattr(self, key, value)
+                self.id = (args[i] if i == 0 else self.id)
+                self.size = (args[i] if i == 1 else self.size)
+                self.x = (args[i] if i == 2 else self.x)
+                self.y = (args[i] if i == 3 else self.y)
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def to_dictionary(self):
         """
