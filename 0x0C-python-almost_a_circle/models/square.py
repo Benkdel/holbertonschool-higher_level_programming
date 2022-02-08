@@ -68,9 +68,12 @@ class Square(Rectangle):
     " ================ Python Builtint Methods ================ "
 
     def __str__(self):
-        """
-            Override str method
-        """
-        description = "[Square] ({}) <{}/{}> - <{}>".format(
-            self.id, self.x, self.y, self.width)
-        return (description)
+        """ Method (custom): Get format string for the Square.
+            Returns:
+                The representation in str for the Square.
+                -'[Square] (<id>) <x>/<y> - <size>'-
+            """
+        str_squa = "({}) ".format(self.id)
+        str_squa += "{}/{} - ".format(self.x, self.y)
+        str_squa += "{}".format(self.size)
+        return ("[Square] " + str_squa)
