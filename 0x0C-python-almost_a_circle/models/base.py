@@ -31,7 +31,7 @@ class Base:
             Returns:
                 JSON string of list_dic...
         """
-        if list_dictionaries is None or list_dictionaries[0] == None:
+        if list_dictionaries is None or list_dictionaries[0] is None:
             return ("[]")
 
         return (json.dumps(list_dictionaries))
