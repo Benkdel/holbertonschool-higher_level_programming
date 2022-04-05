@@ -4,8 +4,6 @@ const dict1 = require('./101-data').dict;
 
 const newDict = {};
 
-console.log(dict1);
-
 for (const k in dict1) {
   const keyExists = dict1[k] in newDict;
 
