@@ -4,7 +4,7 @@ const process = require('process');
 
 const argv = process.argv;
 
-if (argv.length <= 2) {
+if (argv.length <= 3) {
   console.log(0);
 } else {
   const sortedArray = [];
