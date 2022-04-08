@@ -10,14 +10,14 @@
 
 <p align="center">
     <a href="https://github.com/Benkdel/holbertonschool-higher_level_programming/commits/main">
-        <img src="https://img.shields.io/github/last-commit/cristhian1107/printf.svg?style=flat-square&logo=github&logoColor=white" alt="GitHub last commit">
+        <img src="https://img.shields.io/github/last-commit/Benkdel/holbertonschool-ing.svg?style=flat-square&logo=github&logoColor=white" alt="GitHub last commit">
     </a>
-    <a href="https://github.com/Benkdel/holbertonschool-higher_level_programming/issues">
-    <img src="https://img.shields.io/github/issues-raw/cristhian1107/printf.svg?style=flat-square&logo=github&logoColor=white"
+    <a href="https://github.com/Benkdel/holbertonschool-higher_level_programming//issues">
+    <img src="https://img.shields.io/github/issues-raw/Benkdel/holbertonschool-higher_level_programming.svg?style=flat-square&logo=github&logoColor=white"
          alt="GitHub issues">
     </a>
-    <a href="https://github.com/Benkdel/holbertonschool-higher_level_programming/pulls">
-    <img src="https://img.shields.io/github/issues-pr-raw/cristhian1107/printf.svg?style=flat-square&logo=github&logoColor=white"
+    <a href="https://github.com/Benkdel/holbertonschool-higher_level_programming//pulls">
+    <img src="https://img.shields.io/github/issues-pr-raw/Benkdel/holbertonschool-higher_level_programming.svg?style=flat-square&logo=github&logoColor=white"
          alt="GitHub pull requests">
     </a>
 </p>
