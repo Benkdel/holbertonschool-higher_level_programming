@@ -15,7 +15,15 @@ if __name__ == '__main__':
     dbname = sys.argv[3]
     port = 3306
 
-    db = mysqldb.connect(host=host, user=username, passwd=password, db=dbname, port=port)
+    config = {
+        'host': 'localhost',
+        'user': username,
+        'passwd': password,
+        'db': dbname,
+        'port': port
+    }
+
+    db = mysqldb.connect(**config)
 
     cur = db.cursor()
 
@@ -26,11 +34,5 @@ if __name__ == '__main__':
     for row in rows:
         print(row)
 
-
     cur.close()
     db.close()
-
-
-
-
-
