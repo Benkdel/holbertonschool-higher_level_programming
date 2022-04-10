@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-    task 0
+    task 1
 """
 
 if __name__ == '__main__':
