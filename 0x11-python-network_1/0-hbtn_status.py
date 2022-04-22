@@ -10,6 +10,5 @@ if __name__ == '__main__':
         res = """Body response:
         - type: {}
         - content: {}
-        - utf8 content: {}
-        """.format(type(body), body, body.decode("utf-8"))
+        - utf8 content: {}""".format(type(body), body, body.decode("utf-8"))
         print(res)
