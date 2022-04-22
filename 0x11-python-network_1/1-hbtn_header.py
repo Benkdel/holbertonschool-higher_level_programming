@@ -2,6 +2,7 @@
 """ Get value from header """
 
 import urllib.request
+import sys
 
-with urllib.request.urlopen('https://intranet.hbtn.io') as response:
+with urllib.request.urlopen(sys.argv[1]) as response:
     print(response.getheader('X-Request-Id'))
