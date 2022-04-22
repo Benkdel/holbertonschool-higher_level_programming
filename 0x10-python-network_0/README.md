@@ -4,7 +4,7 @@
 </h1>
 
 <h2 align="center">
-    0x08. Everything is an object 
+    0x10.networking_0 
 </h2>
 
 <p align="center">
@@ -22,7 +22,7 @@
 </p>
 
 <h4 align="center"> 
-    simple answers to holberton questions
+    simple networking scripts using curl
 </h4>
 
 <p align="center">
