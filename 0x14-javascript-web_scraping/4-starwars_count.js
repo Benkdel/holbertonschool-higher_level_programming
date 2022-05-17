@@ -15,7 +15,7 @@ axios.get(URL, {
     const characters = results[i].characters;
     for (let j = 0; j < characters.length; j++) {
       if (characters[j].includes(`${charID}`)) {
-        matches += 1;
+        matches++;
       }
     }
   }
