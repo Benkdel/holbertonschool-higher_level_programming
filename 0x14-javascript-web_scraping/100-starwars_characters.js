@@ -49,13 +49,10 @@ async function printAllCharactersofMovie () {
   const data = await getMovie(movieID);
   charsInMovie = charsInMovie.concat(data.characters);
 
-  console.log(charsInMovie);
-
   for (let i = 0; i < charsInMovie.length; i++) {
     for (let j = 0; j < fullCharList.length; j++) {
-      // console.log(`comparing ${charsInMovie[i]} with ${fullCharList[j].url}`)
       if (charsInMovie[i] === fullCharList[j].url) {
-        console.log(fullCharList[j].name);
+        console.log(`${fullCharList[j].name}`);
       }
     }
   }
