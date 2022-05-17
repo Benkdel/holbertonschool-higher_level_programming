@@ -30,7 +30,7 @@ async function getMovie (movieID) {
 }
 
 async function printAllCharactersofMovie () {
-  const maxPage = 10;
+  const maxPage = 15;
   let page = 1;
   let fullCharList = [];
   let charsInMovie = [];
@@ -49,10 +49,15 @@ async function printAllCharactersofMovie () {
   const data = await getMovie(movieID);
   charsInMovie = charsInMovie.concat(data.characters);
 
-  for (const c in charsInMovie) {
-    let charID = c.replace('https://swapi-api.hbtn.io/api/people/', '').replace('/', '');
-    charID = parseInt(charID);
-    console.log(`${fullCharList[charID].name}`);
+  console.log(charsInMovie);
+
+  for (let i = 0; i < charsInMovie.length; i++) {
+    for (let j = 0; j < fullCharList.length; j++) {
+      // console.log(`comparing ${charsInMovie[i]} with ${fullCharList[j].url}`)
+      if (charsInMovie[i] === fullCharList[j].url) {
+        console.log(fullCharList[j].name);
+      }
+    }
   }
 }
 
