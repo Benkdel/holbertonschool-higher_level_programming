@@ -9,14 +9,12 @@ axios.get(URL, {
 }).then((response) => {
   let count = 0;
   const results = response.data.results;
-  for (let i = 0; i < response.data.count; i++) {
-    const characters = results[i].characters;
-    for (let j = 0; j < characters.length; j++) {
-      if (characters[j].includes('18')) {
-        count++;
-      }
-    }
-  }
+  results.forEach(res => {
+    res.characters.forEach(char => {
+      if (char.includes('18')) count++;
+    });
+  });
+
   console.log(count);
 }).catch((err) => {
   console.log(err.message);
