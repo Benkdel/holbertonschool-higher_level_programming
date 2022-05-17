@@ -4,22 +4,20 @@ const axios = require('axios').default;
 const process = require('process');
 
 const URL = process.argv[2];
-const charID = 18;
 
 axios.get(URL, {
 }).then((response) => {
-  let matches = 0;
-  const nMovies = response.data.count;
+  let count = 0;
   const results = response.data.results;
-  for (let i = 0; i < nMovies; i++) {
+  for (let i = 0; i < response.data.count; i++) {
     const characters = results[i].characters;
     for (let j = 0; j < characters.length; j++) {
-      if (characters[j].includes(`${charID}`)) {
-        matches++;
+      if (characters[j].includes('18')) {
+        count++;
       }
     }
   }
-  console.log(matches);
+  console.log(count);
 }).catch((err) => {
   console.log(err.message);
 });
